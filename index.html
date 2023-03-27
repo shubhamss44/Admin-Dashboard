@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Approved", "Submitted"],
+          ["2015", 23, 30],
+          ["2016", 20, 20],
+          ["2017", 30, 12],
+          ["2018", 35, 35],
+          ["2019", 20, 15],
+          ["2020", 35, 30],
+        ]);
+
+        var options = {
+          title: "Company Performance",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/80464d8c99.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+          </div>
+          <div class="close-icon">
+            <img src="images/icons/close.png" alt="Close" />
+            <!-- <a href="#" class="close icon"><i class="fa-solid fa-xmark"></i></a> -->
+          </div>
+        </div>
+        <hr />
+        <div class="sidebar">
+          <div class="menu-icon">
+          <img src="images/icons/dashboard.png" alt="Dashboard" class="icon" />
+          <h3>Dashboard</h3>
+          </div>
+          <div class="text"></div>
+          <img src="images/icons/claims.png" alt="Claims" class="icon" />
+          <h3>Claims</h3>
+          <img
+            src="images/icons/biller queue.png"
+            alt="Biller Queue"
+            class="icon"
+          />
+          <h3>Biller Queue</h3>
+          <img
+            src="images/icons/subscription.png"
+            alt="Subscription"
+            class="icon"
+          />
+          <h3>Subscription</h3>
+          <img src="images/icons/health.png" alt="Health" class="icon" />
+          <h3>Health</h3>
+        </div>
+        <div class="upgrade">
+          <img src="images/icons/upgrade.png" alt="upgrade" />
+          <p>want to upgrade</p>
+          <button class="upgrade-btn">Upgrade now</button>
+        </div>
+      </aside>
+      <main>
+        <div class="navbar">
+          <h1>Overview</h1>
+          <div class="search-box">
+            <input type="text" placeholder="Search" />
+            <img src="images/icons/search.png" alt="search" class="icon" />
+          </div>
+          <img src="images/icons/notification.png" alt="" />
+          <div class="self-profile">
+          <div class="profile-icon">
+            <img
+              src="images/profilepics/img1.jpg"
+              alt="Profile Image"
+              class="proflie-image"
+            />
+          </div>
+          <p>Danille Campbell</p>
+          <img src="images/icons/dropdown.png" alt="dropdown" class="icon">
+          </div>
+        </div>
+        <p id="title">Top Sales Representative</p>
+
+        <ul class="profile-list">
+          <li class="profile-items">
+            <div class="profile-icon">
+              <img
+                src="images/profilepics/img4.jpg"
+                alt="Profile Image"
+                class="profile-image"
+              />
+            </div>
+            <h3 class="profile-name">Nicholas Patrick</h3>
+            <p class="profile-amount">$ 2540.58</p>
+            <p class="profile-product-count">150 Products</p>
+            <p class="profile-premium-count">105 Premium</p>
+            <p class="profile-product-type-gold">+Gold</p>
+            <div class="profile-actions">
+              <div class="profile-more-icon">
+                <img
+                  src="images/icons/actions.png"
+                  alt="more actions"
+                  class="icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="profile-items">
+            <div class="profile-icon">
+              <img
+                src="images/profilepics/img5.jpg"
+                alt="Profile Image"
+                class="profile-image"
+              />
+            </div>
+            <h3 class="profile-name">Cordell Edwards</h3>
+            <p class="profile-amount">$ 1567.80</p>
+            <p class="profile-product-count">95 Products</p>
+            <p class="profile-premium-count">60 Premium</p>
+            <p class="profile-product-type-silver">+Silver</p>
+            <div class="profile-actions">
+              <div class="profile-more-icon">
+                <img
+                  src="images/icons/actions.png"
+                  alt="more actions"
+                  class="icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="profile-items">
+            <div class="profile-icon">
+              <img
+                src="images/profilepics/img6.jpg"
+                alt="Profile Image"
+                class="profile-image"
+              />
+            </div>
+            <h3 class="profile-name">Denrrick Spencer</h3>
+            <p class="profile-amount">$ 1640.26</p>
+            <p class="profile-product-count">120 Products</p>
+            <p class="profile-premium-count">75 Premiums</p>
+            <p class="profile-product-type-silver">+Silver</p>
+            <div class="profile-actions">
+              <div class="profile-more-icon">
+                <img
+                  src="images/icons/actions.png"
+                  alt="more actions"
+                  class="icon"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="profile-items">
+            <div class="profile-icon">
+              <img
+                src="images/profilepics/img7.jpg"
+                alt="Profile Image"
+                class="profile-image"
+              />
+            </div>
+            <h3 class="profile-name">Larissa Burton</h3>
+            <p class="profile-amount">$ 2340.58</p>
+            <p class="profile-product-count">120 Products</p>
+            <p class="profile-premium-count">99 Premiums</p>
+            <p class="profile-product-type-gold">+Gold</p>
+            <div class="profile-actions">
+              <div class="profile-more-icon">
+                <img
+                  src="images/icons/actions.png"
+                  alt="more actions"
+                  class="icon"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="cards">
+          <div class="card product">
+            <div class="left">
+              <p class="name">Product Sold</p>
+              <p class="data">25.1K</p>
+              <div class="variation">
+                <img
+                  src="images/icons/profit.png"
+                  alt="cart icon"
+                  class="icon"
+                />
+                <p class="percentage">+15%</p>
+              </div>
+            </div>
+            <div class="right">
+              <img src="images/icons/cart.png" class="icon" id="xxx"/>
+              <p>View Report</p>
+            </div>
+          </div>
+          <div class="card profite">
+            <div class="left">
+              <p class="name">Total Profit</p>
+              <p class="data">$2,435K</p>
+              <div class="variation">
+                <img src="images/icons/cart.png" class="icon" />
+                <p class="percentage">-3.5%</p>
+              </div>
+            </div>
+            <div class="right">
+              <img src="images/icons/up.png" class="icon" />
+              <p>View Report</p>
+            </div>
+          </div>
+          <div class="card claims">
+            <div class="left">
+              <p class="name">Total No. of Claim</p>
+              <p class="data">3.5M</p>
+              <div class="variation">
+                <img
+                  src="images/icons/profit.png"
+                  alt="cart icon"
+                  class="icon"
+                />
+                <p class="percentage">+15%</p>
+              </div>
+            </div>
+            <div class="right">
+              <img src="images/icons/claims.png" class="icon" />
+              <p>View More</p>
+            </div>
+          </div>
+          <div class="card customer">
+            <div class="left">
+              <p class="name">New Customer</p>
+              <p class="data">43.5K</p>
+              <div class="variation">
+                <img
+                  src="images/icons/profit.png"
+                  alt="cart icon"
+                  class="icon"
+                />
+                <p class="percentage">+10%</p>
+              </div>
+            </div>
+            <div class="right">
+              <img
+                src="images/icons/customer.png"
+                alt="cart icon"
+                class="icon"
+              />
+              <p>View More</p>
+            </div>
+          </div>
+        </div>
+        <div class="reports">
+          <div class="chart">
+            <div id="curve_chart"></div>
+          </div>
+          <div class="target">
+            <div class="upper">
+              <div class="left">
+                <p style="font-size: large;">Sales team target</p>
+                <p class="target-number">82%</p>
+                <p style="font-size: large;">Archived</p>
+              </div>
+
+              <div class="right">
+                <div class="profile-group">
+                  <div class="extra">
+                    <img src="images/icons/extra.png" class="icon" />
+                  </div>
+                  <div class="profile_number">4+</div>
+                  <div class="profiles">
+                    <img src="images/profilepics/img1.jpg" />
+                  </div>
+                  <div class="profiles">
+                    <img src="images/profilepics/img2.jpg" />
+                  </div>
+                  <div class="profiles">
+                    <img src="images/profilepics/img3.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lower">
+              <div class="left">
+                <p style="font-size: medium;">Cleared Queue</p>
+                <p class="target-number">1.4K</p>
+                <p style="font-size: small;">No. of Bills</p>
+                <img src="images/icons/profit.png" class="icon" />
+                <p>+15%</p>
+              </div>
+              <div class="right">
+                <img src="images/icons/wave.png" id="wave">
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
